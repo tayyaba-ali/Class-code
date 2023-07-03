@@ -44,22 +44,21 @@
 //      document.getElementById("city").value = cityName;
 //      }
 
-
+var lessText = '';
 function getData() {
+	
+	var para = document.getElementById('para');
+	var fullText =
+		' <b>laboriosam </b>aspernatur rem facilis beatae alias illum quisquam vel consequatur sequi nostrum veniam id sit, explicabo officia expedita.';
+	var btn = document.getElementById('btn');
+    if (lessText) {
+        para.innerHTML = lessText;
+        btn.innerText = "See More";
+        lessText = '';
+	} else {
+		lessText = para.innerHTML;
+		para.innerHTML += fullText;
 
-    var lessText='';
-    var fullText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus enim, adipisci rerum aperiam obcaecati cupiditate rem asperiores iure. Dolor iure, earum minima explicabo natus ipsa mollitia necessitatibus placeat fuga fugit.'
-    var para = document.getElementById("para");
-
-
-    if(lessText){
-        lessText=para.innerHTML ;
-        para.innerHTML= fullText;
-    }
-    else{
-        para.inner
-    }
-
-    // console.log(para.innerHTML);
-    // console.log(para.innerText);
+		btn.innerText = 'See less';
+	}
 }
